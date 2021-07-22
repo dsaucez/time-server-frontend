@@ -1,5 +1,5 @@
-const axios = require('axios');
-const express = require('express');
+import axios from 'axios';
+import express from 'express';
 
 const APISERVER = process.env["APISERVER"]                                                                                                                   
 console.log(APISERVER)
