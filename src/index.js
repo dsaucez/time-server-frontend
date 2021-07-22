@@ -15,8 +15,8 @@ app.get('/', (req, res) => {
 
   axios(config)
     .then(function (response) {
-      const great_text = "Current time is " +response.data.time
-      res.send(great_text)
+      const great_text = "Current time is " + response.data.time + " on server " + response.data.id;
+      res.send(great_text);
     })
     .catch(function (error) {
       res.status(500).send({error:error})
