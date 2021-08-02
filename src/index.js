@@ -4,7 +4,8 @@ import redis from 'redis';
 
 const APISERVER = process.env.APISERVER
 const REDISCLUSTER = process.env.REDISCLUSTER
-console.log("API server: {}\nREDIS cluster: {}".format(APISERVER, REDISCLUSTER))
+console.log("API server: " + APISERVER)
+console.log("Redis cluster: " + REDISCLUSTER)
 
 const PORT = 8080     // TODO should use ENV and fallback to 8080 instead
 const app = express()
@@ -34,7 +35,7 @@ app.get('/', (req, res) => {
 
   axios(config)
     .then(function (response) {
-      const great_text = "Current time is {} on server {} (total requests: {})".format(response.data.time, response.data.id, count);
+      const great_text = "Current time is " + response.data.time + " on server " + response.data.id + " (total requests: "+ count + ")";
       res.send(great_text);
     })
     .catch(function (error) {
