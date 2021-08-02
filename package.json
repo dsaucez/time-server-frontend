@@ -12,6 +12,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "axios": "^0.21.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "redis": "^3.1.2"
   }
 }
